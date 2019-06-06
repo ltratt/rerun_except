@@ -76,7 +76,6 @@ pub fn rerun_except(globs: &[&str]) -> Result<(), Box<Error>> {
     for e in WalkBuilder::new(&mdir)
         .overrides(overb.build()?)
         .build()
-        .into_iter()
         .filter(|x| x.is_ok())
     {
         let e_uw = e?;
@@ -97,8 +96,8 @@ pub fn rerun_except(globs: &[&str]) -> Result<(), Box<Error>> {
 
 fn check_globs(globs: &[&str]) -> Result<(), Box<Error>> {
     for g in globs {
-        if g.starts_with("!") {
-            return Err(Box::<Error>::from(format!("Glob '%s' starts with a '!'")));
+        if g.starts_with('!') {
+            return Err(Box::<Error>::from("Glob '%s' starts with a '!'"));
         }
     }
     Ok(())
