@@ -7,13 +7,13 @@
 // at your option. This file may not be copied, modified, or distributed except according to those
 // terms.
 
-//! `rerun_except` allows you to easily specify which files should *not* trigger a `cargo` rebuild,
-//! which can significantly cut down on unnecessary builds. In essence, this library inverts the
+//! `rerun_except` allows you to specify which files should *not* trigger a `cargo` rebuild,
+//! which can significantly cut down on unnecessary rebuilds. In essence, this library inverts the
 //! normal way that you tell `cargo` about dependencies: `cargo` requires you to tell it which
 //! files *should* be tracked; `rerun_except` requires you to tell it which files should be
 //! ignored. The latter is safer, because if you add files to your project later they will
-//! automatically trigger a rebuild until and unless you explicitly inform `rerun_except` that they
-//! should be ignored.
+//! automatically trigger a rebuild until, and unless, you explicitly inform `rerun_except` that
+//! they should be ignored.
 //!
 //! `rerun_except` uses the [`ignore`](https://crates.io/crates/ignore) library to specify which
 //! files to ignore. You thus need to specify one or more globs in `gitignore` format which
@@ -33,7 +33,7 @@
 //!     test1.lang
 //!     test2.lang
 //!   target/
-//!    ...
+//!     ...
 //! ```
 //!
 //! and you do not want the two `.lang` files to trigger a rebuild then you would tell
