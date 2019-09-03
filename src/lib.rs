@@ -33,7 +33,7 @@
 //!     test1.lang
 //!     test2.lang
 //!   target/
-//!    ...
+//!     ...
 //! ```
 //!
 //! and you do not want the two `.lang` files to trigger a rebuild then you would tell
