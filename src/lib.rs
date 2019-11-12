@@ -57,6 +57,8 @@
 //!
 //! This will automatically communicate the necessary dependencies to `cargo`.
 
+#![allow(clippy::needless_doctest_main)]
+
 use std::env;
 use std::error::Error;
 
@@ -65,7 +67,7 @@ use ignore::{overrides::OverrideBuilder, WalkBuilder};
 /// Specify which files should not cause `cargo` to rebuild a project. `globs` is an array of
 /// ignore globs. Each entry must be in [`gitignore` format](https://git-scm.com/docs/gitignore)
 /// with the minor exception that entries must not begin with a `!`.
-pub fn rerun_except(globs: &[&str]) -> Result<(), Box<Error>> {
+pub fn rerun_except(globs: &[&str]) -> Result<(), Box<dyn Error>> {
     check_globs(globs)?;
 
     let mdir = env::var("CARGO_MANIFEST_DIR").unwrap();
@@ -97,7 +99,7 @@ pub fn rerun_except(globs: &[&str]) -> Result<(), Box<Error>> {
 fn check_globs(globs: &[&str]) -> Result<(), Box<Error>> {
     for g in globs {
         if g.starts_with('!') {
-            return Err(Box::<Error>::from("Glob '%s' starts with a '!'"));
+            return Err(Box::<dyn Error>::from("Glob '%s' starts with a '!'"));
         }
     }
     Ok(())
