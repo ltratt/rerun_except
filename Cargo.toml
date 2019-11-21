@@ -2,7 +2,7 @@
 name = "rerun_except"
 description = "Rerun a cargo build except when specified files are changed"
 repository = "https://github.com/softdevteam/rerun_except/"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Laurence Tratt <laurie@tratt.net>"]
 readme = "README.md"
 license = "Apache-2.0/MIT"
