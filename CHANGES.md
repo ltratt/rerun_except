@@ -1,3 +1,9 @@
-# lang_tester 0.1.0 (2019-05-26)
+# rerun_except 0.1.1 (2019-11-21)
+
+* License as dual Apache-2.0/MIT (instead of a more complex, and little
+  understood, triple license of Apache-2.0/MIT/UPL-1.0).
+
+
+# rerun_except 0.1.0 (2019-05-26)
 
 First stable release.
