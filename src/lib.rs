@@ -87,7 +87,7 @@ pub fn rerun_except(globs: &[&str]) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-fn check_globs(globs: &[&str]) -> Result<(), Box<Error>> {
+fn check_globs(globs: &[&str]) -> Result<(), Box<dyn Error>> {
     for g in globs {
         if g.starts_with('!') {
             return Err(Box::<dyn Error>::from("Glob '%s' starts with a '!'"));
