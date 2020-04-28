@@ -1,3 +1,8 @@
+# rerun_except 0.1.2 (2020-04-28)
+
+* Silence compiler warning about the non-use of "dyn".
+
+
 # rerun_except 0.1.1 (2019-11-21)
 
 * License as dual Apache-2.0/MIT (instead of a more complex, and little
