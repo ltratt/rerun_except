@@ -1,3 +1,11 @@
+# rerun_except 1.0.0 (2021-03-01)
+
+* The interface has been stable for over 18 months, so a fully stable release
+  now seems appropriate.
+
+* Improve documentation.
+
+
 # rerun_except 0.1.2 (2020-04-28)
 
 * Silence compiler warning about the non-use of "dyn".
